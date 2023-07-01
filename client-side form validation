@@ -1,16 +1,33 @@
 <!doctype html>
 <html>
 <body>
-<!--This is a login page validation--->
-<div id="container">
-<h2>Login</h2>
-<form class="form-control">
-<div class="row">
-<input type="text"placehoder="username"id=""name="">
+<!--Password show/hide toggle button with javascript and html--->
+<div>
+<input type="password"placeholder="password"id="pass">
 </div>
-
-
-</form>
+<div>
+<button onclick="toggle()"id="button">show</button>
 </div>
 </body>
+<script>
+// This is a toggle function that have two conditionals, if and else:
+
+function toggle(){
+
+var password=document.querySelector("#pass");
+var btn=document.querySelector("#button");
+
+if(password.type=="password"){
+password.type="text";
+btn.innerText="hide";
+}
+
+else{
+password.type="password";
+btn.innerText="show";
+}
+
+}
+
+</script>
 </html>
